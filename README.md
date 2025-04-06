@@ -62,8 +62,12 @@ A Laravel + Vue 3 + Inertia.js based crypto school assessment project.
    npm install
    npm run dev
    ```
+8. **Run Storybook on a new terminal tab**:
+   ```bash
+   npm run storybook
+   ```
 
-8. **Start development server**:
+9. **Start development server**:
    ```bash
    php artisan serve
    ```
