@@ -3,10 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Video;
-use DivisionByZeroError;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class VideoSeeder extends Seeder
 {
@@ -15,7 +12,6 @@ class VideoSeeder extends Seeder
      */
     public function run(): void
     {
-        Video::truncate('videos');
         $videos = [
             [
                 'title' => 'Introduction to Vue.js',
