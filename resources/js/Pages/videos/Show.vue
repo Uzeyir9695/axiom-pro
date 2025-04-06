@@ -19,15 +19,6 @@ const props = defineProps({
     moveLogoToRight: Boolean,
 })
 
-const rate = ref(0);
-
-watch(rate, (rate) => {
-    rateVideo(rate);
-});
-
-function rateVideo(rate) {
-    router.post(route('rate.video', {video: props.video.id, rate: rate}))
-}
 </script>
 
 <template>
@@ -44,6 +35,7 @@ function rateVideo(rate) {
             <VideoPlayer
                 :video-url="video.video_url"
                 :logo-url="'/logo/crypto_school_logo.png'"
+                :video-id="video.id"
             />
         </slot>
 

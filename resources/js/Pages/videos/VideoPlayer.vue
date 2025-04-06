@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import {ref, onMounted, onBeforeUnmount, watch} from "vue";
 import vue3StarRatings from "vue3-star-ratings";
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
+import {router} from "@inertiajs/vue3";
 
 const props = defineProps({
     videoUrl: {
@@ -21,9 +22,19 @@ const props = defineProps({
         type: String,
         default: 'How would you rate our lesson out of 5?',
     },
+    videoId: String
 });
 
 const rate = ref(0);
+
+watch(rate, (rate) => {
+  rateVideo(rate);
+});
+
+function rateVideo(rate) {
+  router.post(route('rate.video', {video: props.videoId, rate: rate}))
+}
+
 const videoRef = ref(null);
 let player = null;
 const showPopup = ref(false);

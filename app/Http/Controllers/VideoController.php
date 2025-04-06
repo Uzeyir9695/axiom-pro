@@ -4,18 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Video;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 
 class VideoController extends Controller
 {
     public function index()
     {
-        $videos = Cache::remember('videos_with_ratings', now()->addMinutes(15), function () {
-            return Video::select('id', 'title', 'description', 'video_url')
+        $videos = Video::select('id', 'title', 'description', 'video_url')
                 ->withSum('rates', 'rate')
                 ->get();
-        });
 
         return Inertia::render('videos/Index', [
             'videos' => Inertia::defer(function () use ($videos) {
