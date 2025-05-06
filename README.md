@@ -6,7 +6,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
-A Laravel + Vue 3 + Inertia.js based crypto school assessment project.
+A Laravel + Vue 3 + Inertia.js for AXIOM PRO.
 
 ## 🚀 Installation
 
@@ -14,15 +14,15 @@ A Laravel + Vue 3 + Inertia.js based crypto school assessment project.
 - PHP ≥ 8.3
 - Composer
 - Node.js ≥ 18 + npm
-- MySQL/MariaDB
+- MySQL
 - Git
 
 ### Setup Steps
 
 1. **Clone the repository**:
    ```bash
-   git clone git@github.com:Uzeyir9695/crypto-school-assessment.git crypto-school
-   cd crypto-school
+   git clone git@github.com:Uzeyir9695/axiom-pro.git
+   cd axiom-pro
    ```
 
 2. **Install PHP dependencies**:
